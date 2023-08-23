@@ -7,7 +7,5 @@
   <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/ymh0000123/ymh0000123@output/github-contribution-grid-snake.svg">
   <img alt="github contribution grid snake animation" src="https://cdn.jsdelivr.net/gh/ymh0000123/ymh0000123@output/github-contribution-grid-snake.svg">
 </picture>
-```
 ![](https://raw.githubusercontent.com/ymh0000123/ymh0000123/main/profile-summary-card-output/apprentice/1-repos-per-language.svg)
-```
 <img src="https://count.getloli.com/get/@:ymh0000123" alt=":ymh0000123" />
