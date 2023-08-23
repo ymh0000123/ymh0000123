@@ -15,7 +15,7 @@
 ### Each card usage
 ---
 
-![]([./1-repos-per-language.svg](https://raw.githubusercontent.com/ymh0000123/ymh0000123/main/profile-summary-card-output/apprentice/1-repos-per-language.svg))
+![](https://raw.githubusercontent.com/ymh0000123/ymh0000123/main/profile-summary-card-output/apprentice/1-repos-per-language.svg)
 
 ```
 ![](https://raw.githubusercontent.com/ymh0000123/ymh0000123/main/profile-summary-card-output/apprentice/1-repos-per-language.svg)
