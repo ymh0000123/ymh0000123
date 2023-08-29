@@ -15,6 +15,16 @@
 ### Each card usage
 ---
 
+![](./0-profile-details.svg)
+
+```
+![](https://raw.githubusercontent.com/ymh0000123/ymh0000123/main/profile-summary-card-output/vision_friendly_dark/0-profile-details.svg)
+```
+
+    
+
+---
+
 ![](./1-repos-per-language.svg)
 
 ```
@@ -25,20 +35,10 @@
 
 ---
 
-![](./2-most-commit-language.svg)
+![](./3-stats.svg)
 
 ```
-![](https://raw.githubusercontent.com/ymh0000123/ymh0000123/main/profile-summary-card-output/vision_friendly_dark/2-most-commit-language.svg)
-```
-
-    
-
----
-
-![](./4-productive-time.svg)
-
-```
-![](https://raw.githubusercontent.com/ymh0000123/ymh0000123/main/profile-summary-card-output/vision_friendly_dark/4-productive-time.svg)
+![](https://raw.githubusercontent.com/ymh0000123/ymh0000123/main/profile-summary-card-output/vision_friendly_dark/3-stats.svg)
 ```
 
     
