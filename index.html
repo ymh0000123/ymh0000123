@@ -1,0 +1,108 @@
+<!--
+ * @Date: 2023-10-21 15:30:34
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-10-21 20:17:58
+ * @FilePath: \undefinedd:\网页测试\ymh0000123\1\index.html
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <!--引入mdui-->
+  <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+  <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+  <script
+    src="https://github.moeyy.xyz/https://raw.githubusercontent.com/ymh0000123/Genshin-Impact-Good-words-and-sentences/main/script.js"
+    charset="utf-8"></script>
+  <!-- 引入Bootstrap -->
+  <link href="https://unpkg.com/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <title>ymh0000123</title>
+  <style>
+    .card {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!--导航栏-->
+  <div class="mdui-appbar" mdui-appbar-fixed>
+    <div class="mdui-toolbar mdui-color-indigo">
+      <a class="mdui-btn mdui-btn-icon" id="toggle">
+        <i class="mdui-icon material-icons">menu</i>
+      </a>
+      <a href="#" class="mdui-typo-headline">关于没用的小废鼠</a>
+      <div class="mdui-toolbar-spacer"></div>
+      <div class="mdui-typo-title" id="ys">欲买桂花同载酒...只可惜故人，何日再见呢?</div>
+    </div>
+  </div>
+  <div class="mdui-drawer mdui-drawer-close  mdui-shadow-24" id="drawer">
+    <ul class="mdui-list">
+      <div class="mdui-card-header">
+        <img class="mdui-card-header-avatar" src="https://xiaofeishu.weie.eu.org/ico.png" />
+        <div class="mdui-card-header-title">没用的小废鼠</div>
+        <div class="mdui-card-header-subtitle">awa</div>
+      </div>
+      <li class="mdui-subheader"><i class="mdui-icon material-icons">link</i>更多</li>
+      <li class="mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons">list</i>
+        <a class="mdui-list-item-content" href="https://ymh0000123.github.io/">主页</a>
+      </li>
+      <li class="mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons">assignment</i>
+        <a class="mdui-list-item-content" href="https://xiaofeishu-boke.netlify.app/">blog</a>
+      </li>
+  </div>
+</body>
+
+<body>
+  <div class="mdui-col-md-7 mdui-col-offset-md-3">
+    <div class="card">
+      <div class="card-header">
+        <div class="mdui-typo-display-1">
+          <h1><i class="mdui-icon material-icons">chat</i>没用的小废鼠</h1>
+        </div>
+      </div>
+      <div class="card-body">
+        <p>我的邮箱：ymh0000123@163.com</p>
+        <p>我的哔哩哔哩主页：<a href="https://space.bilibili.com/1783868793">没用的小废鼠</a></p>
+        <p>我的github主页：<a href="https://github.com/ymh0000123">ymh0000123</a></p>
+      <div style="text-align: center;">
+        <div style="display: inline-block;">
+          <img
+            src="https://ymh0000123.github.io/ymh0000123/profile-summary-card-output/blue_green/3-stats.svg">
+          <img
+            src="https://ymh0000123.github.io/ymh0000123/profile-summary-card-output/blue_green/1-repos-per-language.svg">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div class="mdui-typo-display-1">
+          <h1><i class="mdui-icon material-icons">chat</i>一起聊天</h1>
+        </div>
+      </div>
+      <div class="card-body">
+        <script src="https://giscus.app/client.js" data-repo="ymh0000123/ymh0000123" data-repo-id="R_kgDOJ-s_Kg"
+          data-category="官网评论" data-category-id="DIC_kwDOJ-s_Ks4CaVFx" data-mapping="title" data-strict="0"
+          data-reactions-enabled="0" data-emit-metadata="0" data-input-position="top" data-theme="dark_high_contrast"
+          data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous" async>
+          </script>
+      </div>
+    </div>
+  </div>
+  <script>
+    var $ = mdui.$;
+    var inst = new mdui.Drawer('#drawer');
+
+    // method
+
+    $('#toggle').on('click', function () {
+      inst.toggle();
+    });
+  </script>
+</body>
+
+</html>
