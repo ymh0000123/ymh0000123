@@ -1,7 +1,7 @@
 <!--
  * @Date: 2023-10-21 15:30:34
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-10-21 20:17:58
+ * @LastEditTime: 2023-10-22 12:21:16
  * @FilePath: \undefinedd:\网页测试\ymh0000123\1\index.html
 -->
 <!DOCTYPE html>
@@ -9,6 +9,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/ico" href="https://xiaofeishu.weie.eu.org/ico.png">
   <!--引入mdui-->
   <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
   <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
@@ -24,11 +25,12 @@
       margin-top: 20px;
     }
   </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
   <!--导航栏-->
-  <div class="mdui-appbar" mdui-appbar-fixed>
+  <div class="mdui-appbar sticky-top" mdui-appbar-fixed>
     <div class="mdui-toolbar mdui-color-indigo">
       <a class="mdui-btn mdui-btn-icon" id="toggle">
         <i class="mdui-icon material-icons">menu</i>
@@ -59,7 +61,7 @@
 
 <body>
   <div class="mdui-col-md-7 mdui-col-offset-md-3">
-    <div class="card">
+    <div class="card mdui-shadow-24">
       <div class="card-header">
         <div class="mdui-typo-display-1">
           <h1><i class="mdui-icon material-icons">chat</i>没用的小废鼠</h1>
@@ -67,8 +69,8 @@
       </div>
       <div class="card-body">
         <p>我的邮箱：ymh0000123@163.com</p>
-        <p>我的哔哩哔哩主页：<a href="https://space.bilibili.com/1783868793">没用的小废鼠</a></p>
-        <p>我的github主页：<a href="https://github.com/ymh0000123">ymh0000123</a></p>
+        <p>我的哔哩哔哩主页：<a class="mdui-color-teal mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-shadow-1" href="https://space.bilibili.com/1783868793">没用的小废鼠</a></p>
+        <p>我的github主页：<a class="mdui-color-teal mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-shadow-1" href="https://github.com/ymh0000123">ymh0000123</a></p>
       <div style="text-align: center;">
         <div style="display: inline-block;">
           <img
@@ -78,7 +80,7 @@
         </div>
       </div>
     </div>
-    <div class="card">
+    <div class="card mdui-shadow-24">
       <div class="card-header">
         <div class="mdui-typo-display-1">
           <h1><i class="mdui-icon material-icons">chat</i>一起聊天</h1>
