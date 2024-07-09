@@ -1,37 +1,44 @@
 export async function onRequest(request) {
-  // GitHub API URL
   const apiUrl = 'https://api.github.com/users/ymh0000123';
 
   try {
-    // 发起 GET 请求到 GitHub API
-    const response = await fetch(apiUrl);
+    const response = await fetch(apiUrl, {
+      headers: {
+        'User-Agent': 'Cloudflare Pages Function' // GitHub API requires User-Agent header
+      }
+    });
+
     if (!response.ok) {
-      throw new Error('Failed to fetch GitHub API');
+      return new Response(JSON.stringify({ error: `GitHub API request failed with status ${response.status}` }), {
+        status: 500,
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
     }
 
-    // 提取需要的字段
     const userData = await response.json();
-    const { name, location, bio, followers, following, public_repos } = userData;
 
-    // 构建返回的 JSON 对象
-    const responseBody = {
+    // Extracting specific fields
+    const { name, location, bio, followers, following } = userData;
+
+    // Creating the response object
+    const responseBody = JSON.stringify({
       name,
       location,
       bio,
       followers,
-      following,
-      public_repos
-    };
+      following
+    });
 
-    // 返回 JSON 格式的响应
-    return new Response(JSON.stringify(responseBody), {
+    return new Response(responseBody, {
       headers: {
         'Content-Type': 'application/json'
       }
     });
-  } catch (err) {
-    // 处理错误情况
-    return new Response(JSON.stringify({ error: err.message }), {
+
+  } catch (error) {
+    return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
       headers: {
         'Content-Type': 'application/json'
