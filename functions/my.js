@@ -20,7 +20,7 @@ export async function onRequest(request) {
     const userData = await response.json();
 
     // Extracting specific fields
-    const { name, location, bio, followers, following } = userData;
+    const { name, location, bio, followers, following, public_repos } = userData;
 
     // Creating the response object
     const responseBody = JSON.stringify({
@@ -28,7 +28,8 @@ export async function onRequest(request) {
       location,
       bio,
       followers,
-      following
+      following,
+      public_repos
     });
 
     return new Response(responseBody, {
