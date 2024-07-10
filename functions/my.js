@@ -1,48 +1,44 @@
-export async function onRequest(request) {
-  const apiUrl = 'https://api.github.com/users/ymh0000123';
+export async function onRequest(context) {
+  const GITHUB_API_URL = 'https://api.github.com/users/ymh0000123';
 
   try {
-    const response = await fetch(apiUrl, {
+    const response = await fetch(GITHUB_API_URL, {
       headers: {
-        'User-Agent': 'Cloudflare Pages Function' // GitHub API requires User-Agent header
-      }
+        'User-Agent': 'CloudflarePagesFunction',
+      },
     });
 
+    // 检查响应状态
     if (!response.ok) {
-      return new Response(JSON.stringify({ error: `GitHub API request failed with status ${response.status}` }), {
-        status: 500,
-        headers: {
-          'Content-Type': 'application/json'
-        }
+      const errorMessage = `GitHub API responded with status: ${response.status}`;
+      console.error(errorMessage);
+      return new Response(JSON.stringify({ error: errorMessage }), {
+        headers: { 
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+        },
+        status: response.status,
       });
     }
 
-    const userData = await response.json();
+    const data = await response.json();
+    
+    const { name, location, bio, followers, following, public_repos } = data;
 
-    // Extracting specific fields
-    const { name, location, bio, followers, following } = userData;
-
-    // Creating the response object
-    const responseBody = JSON.stringify({
-      name,
-      location,
-      bio,
-      followers,
-      following
+    return new Response(JSON.stringify({ name, location, bio, followers, following, public_repos }), {
+      headers: { 
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+      },
     });
-
-    return new Response(responseBody, {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-
   } catch (error) {
-    return new Response(JSON.stringify({ error: error.message }), {
+    console.error('Failed to fetch data from GitHub', error);
+    return new Response(JSON.stringify({ error: 'Failed to fetch data from GitHub' }), {
+      headers: { 
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+      },
       status: 500,
-      headers: {
-        'Content-Type': 'application/json'
-      }
     });
   }
 }
